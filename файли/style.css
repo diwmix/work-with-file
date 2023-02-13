@@ -1,0 +1,126 @@
+button {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+    font-size: 30px;
+}
+
+input {
+    display: flex;
+}
+
+body {
+    background-color: rgb(46, 46, 46);
+    margin: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-file-row {
+	display: inline-block;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #419152;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/Active */
+.input-file:hover span {
+	background-color: #59be6e;
+}
+.input-file:active span {
+	background-color: #2E703A;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+ 
+/* Список файлов */
+.input-file-list {
+	padding: 10px 0;
+}
+.input-file-list-item {
+	margin-bottom: 10px;
+}
+.input-file-list-remove {
+	color: red;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+#button {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #07bc4c;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+#button:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+#button:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+#button:active {
+	background-color: #efefef !important;
+}
+#button:disabled {
+	background-color: #eee;
+	color: #444;
+	pointer-events: none;
+}
